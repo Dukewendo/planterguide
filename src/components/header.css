@@ -1,0 +1,18 @@
+.header-container {
+    background-color: blue;
+}
+
+
+.header-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: antiquewhite;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
