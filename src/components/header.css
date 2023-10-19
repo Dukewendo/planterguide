@@ -7,13 +7,11 @@
   justify-content: flex-end;
   padding: 10px;
   color: antiquewhite;
-}
-
-ul {
   list-style-type: none;
   margin: 0px;
+  
 }
 
-li {
-    margin: 5px;
+.header-list-item {
+  margin: 5px;
 }
