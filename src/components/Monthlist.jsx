@@ -9,7 +9,7 @@ export default function Monthlist() {
   return (
     <HashRouter basename="/">
       <div className="monthlist-container">
-        <ul>
+        <ul className="main-ul">
           <li className="main-list">
             <Link to="/planterguide">Home</Link>
           </li>
