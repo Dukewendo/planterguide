@@ -1,0 +1,12 @@
+.monthlist-container {
+  display: flex;
+}
+
+.month-list {
+  list-style-type: none;
+  margin-left: -20px;
+}
+
+.month-list-item {
+  margin-top: 15px;
+}

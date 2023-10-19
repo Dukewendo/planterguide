@@ -1,22 +1,24 @@
-import React from 'react'
+import React from "react";
+import { HashRouter, Route, Routes, Link } from "react-router-dom";
+
+import "../components/monthlist.css";
+
+import Planterguide from "./Planterguide";
 
 export default function Monthlist() {
   return (
-    <div className="monthlist-container">
-        <ul className='month-list'>
-            <li>January</li>
-            <li>February</li>
-            <li>March</li>
-            <li>April</li>
-            <li>May</li>
-            <li>June</li>
-            <li>July</li>
-            <li>August</li>
-            <li>September</li>
-            <li>October</li>
-            <li>November</li>
-            <li>December</li>
+    <HashRouter basename="/">
+      <div className="monthlist-container">
+        <ul>
+          <li>
+            <Link to="/planterguide">PlanterGuide Home</Link>
+          </li>
         </ul>
-    </div>
-  )
+
+        <Routes>
+          <Route path="/planterguide" element={<Planterguide/>} />
+        </Routes>
+      </div>
+    </HashRouter>
+  );
 }
