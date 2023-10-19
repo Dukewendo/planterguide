@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header />  
-      <h1>Uk Planting guide</h1>
+      <h1 className='main-page-title'>Uk Planting guide</h1>
     </div>
   );
 }
