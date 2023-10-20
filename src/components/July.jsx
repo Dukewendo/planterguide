@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import "./monthstyles.css";
 
 export default function July() {
   return (

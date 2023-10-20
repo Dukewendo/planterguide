@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./monthstyles.css"
+import "./monthstyles.css";
 
 export default function February() {
   return (

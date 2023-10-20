@@ -1,5 +1,7 @@
 import React from 'react'
 
+import "./monthstyles.css";
+
 export default function December() {
   return (
     <div className="december-container">
