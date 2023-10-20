@@ -6,13 +6,14 @@ export default function Weather() {
   return (
     <div className='weather-container'>
         <div className="week-container">
-            <div className="monday">Monday</div>
-            <div className="tuesday">Tuesday</div>
-            <div className="wednesday">Wednesday</div>
-            <div className="thursday">Thursday</div>
-            <div className="friday">Friday</div>
-            <div className="saturday">Saturday</div>
-            <div className="sunday">Sunday</div>
+          <h4>Weather forcast</h4>
+            <div className="monday">Mon</div>
+            <div className="tuesday">Tues</div>
+            <div className="wednesday">Wed</div>
+            <div className="thursday">Thurs</div>
+            <div className="friday">Fri</div>
+            <div className="saturday">Sat</div>
+            <div className="sunday">Sun</div>
         </div>
     </div>
   )
