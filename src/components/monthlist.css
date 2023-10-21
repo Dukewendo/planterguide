@@ -10,3 +10,15 @@
 a:link, a:hover, a:active, a:visited {
   text-decoration: none;
 }
+
+.indoor-planting-list {
+  color: rgb(150, 116, 91);
+}
+
+.outdoor-planting-list {
+  color:cadetblue
+}
+
+.what-to-harvest {
+  color: gold;
+}
