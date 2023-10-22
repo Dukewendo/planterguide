@@ -1,0 +1,30 @@
+.App-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+}
+
+.header-container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+}
+
+.monthlist-container {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.weather-container {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+body {
+  background-color: black;
+  color: aliceblue
+}
+
+a:link, a:visited {
+  color: aliceblue;
+}

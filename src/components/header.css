@@ -1,0 +1,17 @@
+.header-container {
+  background-color: blue;
+}
+
+.header-list {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  color: antiquewhite;
+  list-style-type: none;
+  margin: 0px;
+  
+}
+
+.header-list-item {
+  margin: 5px;
+}
