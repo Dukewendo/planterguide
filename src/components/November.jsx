@@ -18,25 +18,25 @@ export default function November() {
       </ul>
       <h3 className="what-to-harvest-title">Harvesting</h3>
       <ul className="what-to-harvest">
-        <li className="october-harvesting-item">Artichoke (Jerusalem)</li>
-        <li className="october-harvesting-item">Broccoli</li>
-        <li className="october-harvesting-item">Brussels Sprout</li>
-        <li className="october-harvesting-item">Cabbage</li>
-        <li className="october-harvesting-item">Carrot</li>
-        <li className="october-harvesting-item">Cauliflower</li>
-        <li className="october-harvesting-item">Celeriac</li>
-        <li className="october-harvesting-item">Celery</li>
-        <li className="october-harvesting-item">Chard</li>
-        <li className="october-harvesting-item">Chicory</li>
-        <li className="october-harvesting-item">Chinese Cabbage</li>
-        <li className="october-harvesting-item">Kale</li>
-        <li className="october-harvesting-item">Leek</li>
-        <li className="october-harvesting-item">Lettuce</li>
-        <li className="october-harvesting-item">Parsnip</li>
-        <li className="october-harvesting-item">Potato</li>
-        <li className="october-harvesting-item">Pumpkin</li>
-        <li className="october-harvesting-item">Samphire</li>
-        <li className="october-harvesting-item">Swede</li>
+        <li className="november-harvesting-item">Artichoke (Jerusalem)</li>
+        <li className="november-harvesting-item">Broccoli</li>
+        <li className="november-harvesting-item">Brussels Sprout</li>
+        <li className="november-harvesting-item">Cabbage</li>
+        <li className="november-harvesting-item">Carrot</li>
+        <li className="november-harvesting-item">Cauliflower</li>
+        <li className="november-harvesting-item">Celeriac</li>
+        <li className="november-harvesting-item">Celery</li>
+        <li className="november-harvesting-item">Chard</li>
+        <li className="november-harvesting-item">Chicory</li>
+        <li className="november-harvesting-item">Chinese Cabbage</li>
+        <li className="november-harvesting-item">Kale</li>
+        <li className="november-harvesting-item">Leek</li>
+        <li className="november-harvesting-item">Lettuce</li>
+        <li className="november-harvesting-item">Parsnip</li>
+        <li className="november-harvesting-item">Potato</li>
+        <li className="november-harvesting-item">Pumpkin</li>
+        <li className="november-harvesting-item">Samphire</li>
+        <li className="november-harvesting-item">Swede</li>
       </ul>
     </div>
   );
