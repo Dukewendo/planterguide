@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Weather() {
+  const [weatherData, setWeatherData] = useState(null);
+
   useEffect(() => {
     fetch(
       "https://api.weatherbit.io/v2.0/forecast/daily?lat=54.57623&lon=-1.23483&key=API_KEY_HERE"
@@ -13,39 +15,31 @@ export default function Weather() {
       })
       .then((data) => {
         console.log("data retrieved", data);
-        console.log(data.data[0].weather.description)
+        setWeatherData(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-
-    const days_of_the_week = [
-      "Sun",
-      "Mon",
-      "Tues",
-      "Wed",
-      "Thurs",
-      "Fri",
-      "Sat",
-    ];
-
-    const now = new Date();
-    const day_today = now.getDay();
-    // console.log(
-    //   `Today is ${days_of_the_week[day_today]} and the forecast is ${data.data[0].weather.description}:`
-    //);
   }, []);
+
+  if (!weatherData) {
+    return <div className="loading-data">Loading weather data...</div>;
+  }
+
+  const days_of_the_week = ["sun", "mon", "tues", "wed", "thurs", "fri", "sat"];
+
+  const now = new Date();
+  const currentDay = now.getDay();
 
   return (
     <div className="week-weather-container">
       <h4>This weeks weather</h4>
-      <div className="mon-weather">Mon</div>
-      <div className="tues-weather">Tues</div>
-      <div className="wed-weather">Wed</div>
-      <div className="thurs-weather">Thurs</div>
-      <div className="fri-weather">Fri</div>
-      <div className="sat-weather">Sat</div>
-      <div className="sun-weather">Sun</div>
+      {weatherData.map((dayData, index) => (
+        <div key={index} className={`day-weather-day-${index}`}>
+          {days_of_the_week[currentDay + (index % 7)]}:{" "}
+          {dayData.weather.description}
+        </div>
+      ))}
     </div>
   );
 }
