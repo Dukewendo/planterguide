@@ -5,7 +5,7 @@ export default function Weather() {
 
   useEffect(() => {
     fetch(
-      "https://api.weatherbit.io/v2.0/forecast/daily?lat=54.57623&lon=-1.23483&key=API_KEY_HERE"
+      "https://api.weatherbit.io/v2.0/forecast/daily?lat=54.57623&lon=-1.23483&key=API_KEY"
     )
       .then((response) => {
         if (!response.ok) {
@@ -15,15 +15,19 @@ export default function Weather() {
       })
       .then((data) => {
         console.log("data retrieved", data);
-        setWeatherData(data);
+        setWeatherData(data.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
 
-  if (!weatherData) {
+  if (weatherData === null) {
     return <div className="loading-data">Loading weather data...</div>;
+  }
+
+  if (!Array.isArray(weatherData)) {
+    return <div className="loading-data">Weather data not available..</div>;
   }
 
   const days_of_the_week = ["sun", "mon", "tues", "wed", "thurs", "fri", "sat"];
@@ -33,13 +37,16 @@ export default function Weather() {
 
   return (
     <div className="week-weather-container">
-      <h4>This weeks weather</h4>
-      {weatherData.map((dayData, index) => (
-        <div key={index} className={`day-weather-day-${index}`}>
-          {days_of_the_week[currentDay + (index % 7)]}:{" "}
-          {dayData.weather.description}
-        </div>
-      ))}
+      <h4>This week's weather</h4>
+      {weatherData.map((dayData, index) => {
+        const dayIndex = (currentDay + index) % 7;
+        return (
+          <div key={index} className={`day-weather-day-${index}`}>
+            {days_of_the_week[dayIndex]}: {dayData.weather.description}
+          </div>
+        );
+      })}
     </div>
   );
 }
+
