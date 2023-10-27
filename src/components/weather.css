@@ -1,5 +1,41 @@
 .weather-container {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.sunny-icon {
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/sun.png");
+}
+
+.rain-icon {
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/rain.png");
+}
+
+.overcast-icon {
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/overcast.png");
+}
+
+.snow-icon {
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/snowing.png");
+}
+
+.windy-icon {
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/wind.png");
+}
+
+.storm-icon {
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/storm.png");
 }

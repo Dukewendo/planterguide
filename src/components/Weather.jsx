@@ -35,6 +35,17 @@ export default function Weather() {
   const now = new Date();
   const currentDay = now.getDay();
 
+  // Need to see the exact wording responses from API
+  const iconMapping = {
+    "sunny" : "sunny-icon",
+    "rain" : "raining-icon",
+    "overcast" : "overcast-icon",
+    "snow": "snow-icon",
+    "windy": "wind-icon",
+    "storm": "storm-icon"
+
+  }
+
   return (
     <div className="week-weather-container">
       <h4>This week's weather</h4>
@@ -43,6 +54,7 @@ export default function Weather() {
         return (
           <div key={index} className={`day-weather-day-${index}`}>
             {days_of_the_week[dayIndex]}: {dayData.weather.description}
+            <i className={iconMapping[dayData.weather.description] || "default-icon"}></i>
           </div>
         );
       })}
