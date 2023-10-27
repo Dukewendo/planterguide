@@ -4,7 +4,7 @@
 
 .header-list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 10px;
   color: antiquewhite;
   list-style-type: none;
