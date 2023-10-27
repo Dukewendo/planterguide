@@ -4,38 +4,55 @@
   margin: 10px;
 }
 
-.sunny-icon {
-  width: 10px;
-  height: 10px;
+.sun-icon {
+  width: 50px;
+  height: 50px;
   background-image: url("../images/sun.png");
 }
 
 .rain-icon {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   background-image: url("../images/rain.png");
 }
 
 .overcast-icon {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   background-image: url("../images/overcast.png");
 }
 
 .snow-icon {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   background-image: url("../images/snowing.png");
 }
 
 .windy-icon {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   background-image: url("../images/wind.png");
 }
 
 .storm-icon {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   background-image: url("../images/storm.png");
+}
+
+.mist-icon {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/mist.png");
+}
+
+.default-icon {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/notfound.png");
+}
+
+.day-weather-day-0, .day-weather-day-1, .day-weather-day-2, .day-weather-day-3, .day-weather-day-4, .day-weather-day-5, .day-weather-day-6 {
+  display: flex;
+  flex-direction: column;
 }

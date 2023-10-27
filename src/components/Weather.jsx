@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 
+import "./weather.css"
+
 export default function Weather() {
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
     fetch(
-      "https://api.weatherbit.io/v2.0/forecast/daily?lat=54.57623&lon=-1.23483&key=API_KEY"
+      "https://api.weatherbit.io/v2.0/forecast/daily?lat=54.57623&lon=-1.23483&key="
     )
       .then((response) => {
         if (!response.ok) {
@@ -26,6 +28,7 @@ export default function Weather() {
     return <div className="loading-data">Loading weather data...</div>;
   }
 
+  //add server status codes for other errors
   if (!Array.isArray(weatherData)) {
     return <div className="loading-data">Weather data not available..</div>;
   }
@@ -37,14 +40,44 @@ export default function Weather() {
 
   // Need to see the exact wording responses from API
   const iconMapping = {
-    "sunny" : "sunny-icon",
-    "rain" : "raining-icon",
-    "overcast" : "overcast-icon",
-    "snow": "snow-icon",
-    "windy": "wind-icon",
-    "storm": "storm-icon"
-
-  }
+    "Thunderstorm with light rain": "storm-icon",
+    "Thunderstorm with rain": "storm-icon",
+    "Thunderstorm with heavy rain": "storm-icon",
+    "Thunderstorm with light drizzle": "storm-icon",
+    "Thunderstorm with drizzle": "storm-icon",
+    "Thunderstorm with heavy drizzle": "storm-icon",
+    "Thunderstorm with Hail": "storm-icon",
+    "Unknown Precipitation": "rain-icon",
+    "Light Drizzle": "rain-icon",
+    Drizzle: "rain-icon",
+    "Heavy Drizzle": "rain-icon",
+    "Light rain": "rain-icon",
+    "Moderate rain": "rain-icon",
+    "Heavy rain": "rain-icon",
+    "Freezing rain": "rain-icon",
+    "Light shower rain": "rain-icon",
+    "Shower rain": "rain-icon",
+    "Heavy shower rain": "rain-icon",
+    "Light snow": "snow-icon",
+    Snow: "snow-icon",
+    "Heavy Snow": "snow-icon",
+    "Mix snow/rain": "snow-icon",
+    Sleet: "snow-icon",
+    "Heavy sleet": "snow-icon",
+    "Snow shower": "snow-icon",
+    "Heavy snow shower": "snow-icon",
+    Flurries: "snow-icon",
+    Mist: "mist-icon",
+    Smoke: "mist-icon",
+    Haze: "mist-icon",
+    Fog: "mist-icon",
+    "Freezing Fog": "mist-icon",
+    "Clear sky": "sun-icon",
+    "Few clouds": "overcast-icon",
+    "Scattered clouds": "overcast-icon",
+    "Broken clouds": "overcast-icon",
+    "Overcast clouds": "overcast-icon",
+  };
 
   return (
     <div className="week-weather-container">
@@ -54,10 +87,15 @@ export default function Weather() {
         return (
           <div key={index} className={`day-weather-day-${index}`}>
             {days_of_the_week[dayIndex]}: {dayData.weather.description}
-            <i className={iconMapping[dayData.weather.description] || "default-icon"}></i>
+            <img
+              className={
+                iconMapping[dayData.weather.description] || "default-icon"
+              }
+            ></img>
           </div>
         );
       })}
     </div>
   );
 }
+
