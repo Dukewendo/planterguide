@@ -7,7 +7,7 @@ export default function Weather() {
 
   useEffect(() => {
     fetch(
-      "https://api.weatherbit.io/v2.0/forecast/daily?lat=54.57623&lon=-1.23483&key="
+      "https://api.weatherbit.io/v2.0/forecast/daily?lat=54.57623&lon=-1.23483&key=1bc5d906302743a99e8d79bfe5fc42da"
     )
       .then((response) => {
         if (!response.ok) {
@@ -33,12 +33,12 @@ export default function Weather() {
     return <div className="loading-data">Weather data not available..</div>;
   }
 
-  const days_of_the_week = ["sun", "mon", "tues", "wed", "thurs", "fri", "sat"];
+  const days_of_the_week = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 
   const now = new Date();
   const currentDay = now.getDay();
 
-  // Need to see the exact wording responses from API
+  
   const iconMapping = {
     "Thunderstorm with light rain": "storm-icon",
     "Thunderstorm with rain": "storm-icon",
