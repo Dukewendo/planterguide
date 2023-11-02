@@ -1,6 +1,6 @@
 {
   "name": "planterguide",
-  "homepage": "https://dukewendo.github.io/planterguide/"
+  "homepage": "https://dukewendo.github.io/planterguide/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
